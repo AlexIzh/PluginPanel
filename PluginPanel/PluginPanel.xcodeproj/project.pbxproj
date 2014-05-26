@@ -1,0 +1,337 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1F22DE7917B3A93D000F3305 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F22DE7817B3A93D000F3305 /* AppKit.framework */; };
+		1F22DE7B17B3A93D000F3305 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F22DE7A17B3A93D000F3305 /* Foundation.framework */; };
+		1F22DE8117B3A93D000F3305 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1F22DE7F17B3A93D000F3305 /* InfoPlist.strings */; };
+		1F22DE8417B3A93D000F3305 /* PluginPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F22DE8317B3A93D000F3305 /* PluginPanel.m */; };
+		1F22DE9317B3A969000F3305 /* PanelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F22DE9217B3A969000F3305 /* PanelView.m */; };
+		1F22DE9717B3A971000F3305 /* LogClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F22DE9617B3A971000F3305 /* LogClient.m */; };
+		1F22DE9B17B3AF16000F3305 /* PluginPanelClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F22DE9A17B3AF16000F3305 /* PluginPanelClient.m */; };
+		1F22DE9E17B3B288000F3305 /* plugin_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F22DE9C17B3B288000F3305 /* plugin_icon.png */; };
+		1F22DE9F17B3B288000F3305 /* plugin_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F22DE9D17B3B288000F3305 /* plugin_icon@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1F22DE7517B3A93D000F3305 /* PluginPanel.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PluginPanel.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F22DE7817B3A93D000F3305 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		1F22DE7A17B3A93D000F3305 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1F22DE7E17B3A93D000F3305 /* PluginPanel-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PluginPanel-Info.plist"; sourceTree = "<group>"; };
+		1F22DE8017B3A93D000F3305 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1F22DE8217B3A93D000F3305 /* PluginPanel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PluginPanel.h; sourceTree = "<group>"; };
+		1F22DE8317B3A93D000F3305 /* PluginPanel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PluginPanel.m; sourceTree = "<group>"; };
+		1F22DE8517B3A93D000F3305 /* PluginPanel-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PluginPanel-Prefix.pch"; sourceTree = "<group>"; };
+		1F22DE9117B3A969000F3305 /* PanelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanelView.h; sourceTree = "<group>"; };
+		1F22DE9217B3A969000F3305 /* PanelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanelView.m; sourceTree = "<group>"; };
+		1F22DE9517B3A971000F3305 /* LogClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogClient.h; sourceTree = "<group>"; };
+		1F22DE9617B3A971000F3305 /* LogClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogClient.m; sourceTree = "<group>"; };
+		1F22DE9917B3AF16000F3305 /* PluginPanelClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PluginPanelClient.h; path = PluginPanelClient/PluginPanelClient.h; sourceTree = "<group>"; };
+		1F22DE9A17B3AF16000F3305 /* PluginPanelClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PluginPanelClient.m; path = PluginPanelClient/PluginPanelClient.m; sourceTree = "<group>"; };
+		1F22DE9C17B3B288000F3305 /* plugin_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plugin_icon.png; sourceTree = "<group>"; };
+		1F22DE9D17B3B288000F3305 /* plugin_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "plugin_icon@2x.png"; sourceTree = "<group>"; };
+		1F5C9ED617B3BE1900AEB600 /* DVTFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTFoundation.h; sourceTree = "<group>"; };
+		1F5C9ED717B3BE1900AEB600 /* DVTKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTKit.h; sourceTree = "<group>"; };
+		1F5C9ED817B3BE1900AEB600 /* IDEFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDEFoundation.h; sourceTree = "<group>"; };
+		1F5C9ED917B3BE1900AEB600 /* IDEKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDEKit.h; sourceTree = "<group>"; };
+		1F5C9EDA17B3BE1900AEB600 /* IDESourceEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDESourceEditor.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1F22DE7217B3A93D000F3305 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F22DE7917B3A93D000F3305 /* AppKit.framework in Frameworks */,
+				1F22DE7B17B3A93D000F3305 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1F22DE6C17B3A93D000F3305 = {
+			isa = PBXGroup;
+			children = (
+				1F22DE9C17B3B288000F3305 /* plugin_icon.png */,
+				1F22DE9D17B3B288000F3305 /* plugin_icon@2x.png */,
+				1F22DE9917B3AF16000F3305 /* PluginPanelClient.h */,
+				1F22DE9A17B3AF16000F3305 /* PluginPanelClient.m */,
+				1F22DE9417B3A971000F3305 /* Client */,
+				1F22DE7C17B3A93D000F3305 /* PluginPanel */,
+				1F22DE7717B3A93D000F3305 /* Frameworks */,
+				1F22DE7617B3A93D000F3305 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1F22DE7617B3A93D000F3305 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1F22DE7517B3A93D000F3305 /* PluginPanel.xcplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1F22DE7717B3A93D000F3305 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1F22DE7817B3A93D000F3305 /* AppKit.framework */,
+				1F22DE7A17B3A93D000F3305 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1F22DE7C17B3A93D000F3305 /* PluginPanel */ = {
+			isa = PBXGroup;
+			children = (
+				1F5C9ED517B3BE1900AEB600 /* XcodeClasses */,
+				1F22DE8217B3A93D000F3305 /* PluginPanel.h */,
+				1F22DE8317B3A93D000F3305 /* PluginPanel.m */,
+				1F22DE9117B3A969000F3305 /* PanelView.h */,
+				1F22DE9217B3A969000F3305 /* PanelView.m */,
+				1F22DE7D17B3A93D000F3305 /* Supporting Files */,
+			);
+			path = PluginPanel;
+			sourceTree = "<group>";
+		};
+		1F22DE7D17B3A93D000F3305 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1F22DE7E17B3A93D000F3305 /* PluginPanel-Info.plist */,
+				1F22DE7F17B3A93D000F3305 /* InfoPlist.strings */,
+				1F22DE8517B3A93D000F3305 /* PluginPanel-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1F22DE9417B3A971000F3305 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				1F22DE9517B3A971000F3305 /* LogClient.h */,
+				1F22DE9617B3A971000F3305 /* LogClient.m */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
+		1F5C9ED517B3BE1900AEB600 /* XcodeClasses */ = {
+			isa = PBXGroup;
+			children = (
+				1F5C9ED617B3BE1900AEB600 /* DVTFoundation.h */,
+				1F5C9ED717B3BE1900AEB600 /* DVTKit.h */,
+				1F5C9ED817B3BE1900AEB600 /* IDEFoundation.h */,
+				1F5C9ED917B3BE1900AEB600 /* IDEKit.h */,
+				1F5C9EDA17B3BE1900AEB600 /* IDESourceEditor.h */,
+			);
+			path = XcodeClasses;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1F22DE7417B3A93D000F3305 /* PluginPanel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F22DE8817B3A93D000F3305 /* Build configuration list for PBXNativeTarget "PluginPanel" */;
+			buildPhases = (
+				1F22DE7117B3A93D000F3305 /* Sources */,
+				1F22DE7217B3A93D000F3305 /* Frameworks */,
+				1F22DE7317B3A93D000F3305 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PluginPanel;
+			productName = PluginPanel;
+			productReference = 1F22DE7517B3A93D000F3305 /* PluginPanel.xcplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1F22DE6D17B3A93D000F3305 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Александр Северьянов";
+			};
+			buildConfigurationList = 1F22DE7017B3A93D000F3305 /* Build configuration list for PBXProject "PluginPanel" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1F22DE6C17B3A93D000F3305;
+			productRefGroup = 1F22DE7617B3A93D000F3305 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1F22DE7417B3A93D000F3305 /* PluginPanel */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1F22DE7317B3A93D000F3305 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F22DE8117B3A93D000F3305 /* InfoPlist.strings in Resources */,
+				1F22DE9E17B3B288000F3305 /* plugin_icon.png in Resources */,
+				1F22DE9F17B3B288000F3305 /* plugin_icon@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1F22DE7117B3A93D000F3305 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F22DE8417B3A93D000F3305 /* PluginPanel.m in Sources */,
+				1F22DE9317B3A969000F3305 /* PanelView.m in Sources */,
+				1F22DE9717B3A971000F3305 /* LogClient.m in Sources */,
+				1F22DE9B17B3AF16000F3305 /* PluginPanelClient.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1F22DE7F17B3A93D000F3305 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1F22DE8017B3A93D000F3305 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1F22DE8617B3A93D000F3305 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		1F22DE8717B3A93D000F3305 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		1F22DE8917B3A93D000F3305 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				DSTROOT = "$(HOME)";
+				GCC_ENABLE_OBJC_GC = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PluginPanel/PluginPanel-Prefix.pch";
+				INFOPLIST_FILE = "PluginPanel/PluginPanel-Info.plist";
+				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				LD_RUNPATH_SEARCH_PATHS = /Developer;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xcplugin;
+			};
+			name = Debug;
+		};
+		1F22DE8A17B3A93D000F3305 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				DSTROOT = "$(HOME)";
+				GCC_ENABLE_OBJC_GC = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PluginPanel/PluginPanel-Prefix.pch";
+				INFOPLIST_FILE = "PluginPanel/PluginPanel-Info.plist";
+				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				LD_RUNPATH_SEARCH_PATHS = /Developer;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xcplugin;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1F22DE7017B3A93D000F3305 /* Build configuration list for PBXProject "PluginPanel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F22DE8617B3A93D000F3305 /* Debug */,
+				1F22DE8717B3A93D000F3305 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1F22DE8817B3A93D000F3305 /* Build configuration list for PBXNativeTarget "PluginPanel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F22DE8917B3A93D000F3305 /* Debug */,
+				1F22DE8A17B3A93D000F3305 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1F22DE6D17B3A93D000F3305 /* Project object */;
+}
