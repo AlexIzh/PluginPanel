@@ -3,6 +3,13 @@ PluginPanel
 Plugin for Xcode! You can add your plugin to this panel and you should not care about ui in Xcode! It looks like left panel(tree of files, breakpoints etc).
 Xcode 5+ only.
 
+Supports XCode 6+ also
+
+[Example of use](https://github.com/AlexIzh/TimePlugin)
+
+![PC_ss01.png](https://dl.dropboxusercontent.com/u/52596119/Screen%20Shot%202015-04-14%20at%202.14.56%20AM.png)
+![PC_ss02.png](https://dl.dropboxusercontent.com/u/52596119/Screen%20Shot%202015-04-14%20at%202.14.51%20AM.png)
+
 ## Installation
 Build this plugin, then the plugin will automatically be installed in `~/Library/Application Support/Developer/Shared/Xcode/Plug-ins`.  
 Relaunch Xcode and PluginPanel will make your life easier.
@@ -38,8 +45,6 @@ Example usage:
          PluginPanelAddPlugin(choice, [[note userInfo] objectForKey:PluginPanelWindowNotificationKey]);
      }
 
-
-![PC_ss01.png](http://cl.ly/image/361O373s1020/Screen%20Shot%202013-09-24%20at%2023.29.54.png)
 
 ## License
 *TimePlugin* is released under the **MIT License**, see *LICENSE.txt*.
