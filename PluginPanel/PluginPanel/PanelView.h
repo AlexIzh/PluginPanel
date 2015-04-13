@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import "DVTKit.h"
 
-@interface PanelView : NSView
+@interface PanelView : NSVisualEffectView
 @property (nonatomic, readonly) DVTChooserView *chooserView;
 @property (nonatomic, retain) NSView               *contentView;
 @property (nonatomic, assign) NSWindow          *mainWindow;

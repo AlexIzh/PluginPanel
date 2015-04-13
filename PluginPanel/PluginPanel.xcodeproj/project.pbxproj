@@ -16,6 +16,8 @@
 		1F22DE9B17B3AF16000F3305 /* PluginPanelClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F22DE9A17B3AF16000F3305 /* PluginPanelClient.m */; };
 		1F22DE9E17B3B288000F3305 /* plugin_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F22DE9C17B3B288000F3305 /* plugin_icon.png */; };
 		1F22DE9F17B3B288000F3305 /* plugin_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F22DE9D17B3B288000F3305 /* plugin_icon@2x.png */; };
+		FAB3F86D1ADC514D0098B2E2 /* NSButton+ImageTintColor.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB3F86C1ADC514D0098B2E2 /* NSButton+ImageTintColor.m */; };
+		FAB3F86F1ADC522D0098B2E2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAB3F86E1ADC522D0098B2E2 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,10 +38,13 @@
 		1F22DE9C17B3B288000F3305 /* plugin_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plugin_icon.png; sourceTree = "<group>"; };
 		1F22DE9D17B3B288000F3305 /* plugin_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "plugin_icon@2x.png"; sourceTree = "<group>"; };
 		1F5C9ED617B3BE1900AEB600 /* DVTFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTFoundation.h; sourceTree = "<group>"; };
-		1F5C9ED717B3BE1900AEB600 /* DVTKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTKit.h; sourceTree = "<group>"; };
 		1F5C9ED817B3BE1900AEB600 /* IDEFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDEFoundation.h; sourceTree = "<group>"; };
 		1F5C9ED917B3BE1900AEB600 /* IDEKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDEKit.h; sourceTree = "<group>"; };
 		1F5C9EDA17B3BE1900AEB600 /* IDESourceEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDESourceEditor.h; sourceTree = "<group>"; };
+		FA2F9B991AD51C6800462275 /* DVTKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTKit.h; sourceTree = "<group>"; };
+		FAB3F86B1ADC514D0098B2E2 /* NSButton+ImageTintColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSButton+ImageTintColor.h"; sourceTree = "<group>"; };
+		FAB3F86C1ADC514D0098B2E2 /* NSButton+ImageTintColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSButton+ImageTintColor.m"; sourceTree = "<group>"; };
+		FAB3F86E1ADC522D0098B2E2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAB3F86F1ADC522D0098B2E2 /* QuartzCore.framework in Frameworks */,
 				1F22DE7917B3A93D000F3305 /* AppKit.framework in Frameworks */,
 				1F22DE7B17B3A93D000F3305 /* Foundation.framework in Frameworks */,
 			);
@@ -80,6 +86,7 @@
 		1F22DE7717B3A93D000F3305 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FAB3F86E1ADC522D0098B2E2 /* QuartzCore.framework */,
 				1F22DE7817B3A93D000F3305 /* AppKit.framework */,
 				1F22DE7A17B3A93D000F3305 /* Foundation.framework */,
 			);
@@ -89,6 +96,8 @@
 		1F22DE7C17B3A93D000F3305 /* PluginPanel */ = {
 			isa = PBXGroup;
 			children = (
+				FAB3F86B1ADC514D0098B2E2 /* NSButton+ImageTintColor.h */,
+				FAB3F86C1ADC514D0098B2E2 /* NSButton+ImageTintColor.m */,
 				1F5C9ED517B3BE1900AEB600 /* XcodeClasses */,
 				1F22DE8217B3A93D000F3305 /* PluginPanel.h */,
 				1F22DE8317B3A93D000F3305 /* PluginPanel.m */,
@@ -121,8 +130,8 @@
 		1F5C9ED517B3BE1900AEB600 /* XcodeClasses */ = {
 			isa = PBXGroup;
 			children = (
+				FA2F9B991AD51C6800462275 /* DVTKit.h */,
 				1F5C9ED617B3BE1900AEB600 /* DVTFoundation.h */,
-				1F5C9ED717B3BE1900AEB600 /* DVTKit.h */,
 				1F5C9ED817B3BE1900AEB600 /* IDEFoundation.h */,
 				1F5C9ED917B3BE1900AEB600 /* IDEKit.h */,
 				1F5C9EDA17B3BE1900AEB600 /* IDESourceEditor.h */,
@@ -198,6 +207,7 @@
 				1F22DE9317B3A969000F3305 /* PanelView.m in Sources */,
 				1F22DE9717B3A971000F3305 /* LogClient.m in Sources */,
 				1F22DE9B17B3AF16000F3305 /* PluginPanelClient.m in Sources */,
+				FAB3F86D1ADC514D0098B2E2 /* NSButton+ImageTintColor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

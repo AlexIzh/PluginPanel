@@ -13,6 +13,8 @@
 #import "PanelView.h"
 #import "PluginPanelClient.h"
 
+#import "NSButton+ImageTintColor.h"
+
 NSString *const PluginButtonIdentifier = @"PluginButtonIdentifier";
 
 @class PluginButtonProvider;
@@ -84,7 +86,7 @@ NSString *const PluginButtonIdentifier = @"PluginButtonIdentifier";
             NSMutableArray *ar = [NSMutableArray arrayWithArray:delegate.allowedItemIdentifiers];
             [ar addObject:proxy.toolbarItemIdentifier];
             delegate.allowedItemIdentifiers = ar;
-            [window.toolbar insertItemWithItemIdentifier:PluginButtonIdentifier atIndex:6];
+            [window.toolbar insertItemWithItemIdentifier:PluginButtonIdentifier atIndex:window.toolbar.items.count];
             [[NSNotificationCenter defaultCenter] postNotificationName:PluginPanelDidLoadedWindowNotification object:nil userInfo:[NSDictionary dictionaryWithObject:window forKey:PluginPanelWindowNotificationKey]];
         }
     }
@@ -96,7 +98,10 @@ NSString *const PluginButtonIdentifier = @"PluginButtonIdentifier";
         NSWindow *window = [[note userInfo] objectForKey:PluginPanelWindowNotificationKey];
         PanelView *panel = [self myViewForWindow:window];
         [panel.chooserView.mutableChoices addObject:plugin];
-        panel.contentView = [[[[panel.chooserView mutableChoices] lastObject] representedObject] view];
+        if (!panel.contentView) {
+            panel.contentView = [[[[panel.chooserView mutableChoices] lastObject] representedObject] view];
+        }
+//        panel
         [panel setFrame:panel.frame];
     }
 }
@@ -167,22 +172,19 @@ NSString *const PluginButtonIdentifier = @"PluginButtonIdentifier";
 
 + (DVTSplitView *)splitViewForWindow:(NSWindow *)window {
     DVTSplitView *slpitView = nil;
-//    if (slpitView) return slpitView;
     for (NSView *sub in [window.contentView subviews]) {
-        if ([sub isMemberOfClass:NSClassFromString(@"DVTTabSwitcher")]) {
-            for (NSView *sub1 in [sub subviews]) {
-                if ([sub1 isMemberOfClass:[NSTabView class]]) {
-                    for (NSView *s in [[[(NSTabView *)sub1 selectedTabViewItem] view] subviews]) {
-                        for (NSView *s1 in s.subviews) {
-                            if ([s1 isMemberOfClass:NSClassFromString(@"DVTSplitView")]) {
-                                slpitView = (DVTSplitView *)s1;
-                                break;
-                            }
-                        }
+        if ([sub isMemberOfClass:[NSTabView class]]) {
+            for (NSView *s in [[[(NSTabView *)sub selectedTabViewItem] view] subviews]) {
+                for (NSView *s1 in s.subviews) {
+                    if ([s1 isMemberOfClass:NSClassFromString(@"DVTSplitView")]) {
+                        slpitView = (DVTSplitView *)s1;
+                        break;
                     }
                 }
+                if (slpitView) break;
             }
         }
+        if (slpitView) break;
     }
     return slpitView;
 }
@@ -190,11 +192,24 @@ NSString *const PluginButtonIdentifier = @"PluginButtonIdentifier";
 + (id)itemForItemIdentifier:(id)arg1 forToolbarInWindow:(id)arg2 {
     if ([arg1 isEqualToString:PluginButtonIdentifier]) {
         NSImage *img =[[NSImage alloc] initWithContentsOfFile:[[NSBundle bundleWithIdentifier:@"com.moqod.PluginPanel"] pathForImageResource:@"plugin_icon"]];
-        NSButton * button = [[NSButton alloc] initWithFrame:NSMakeRect(.0f, .0f, 50.f, 30.f)];
+        NSButton * button = [[NSButton alloc] initWithFrame:NSMakeRect(.0f, .0f, 20.f,20.f)];
         [button setButtonType:NSOnOffButton];
-        [button setBezelStyle:NSRecessedBezelStyle];
+        [button setBezelStyle:NSTexturedRoundedBezelStyle];
         [button setBordered:NO];
-        [button setImage:img];
+        [button setTintColor:[NSColor colorWithRed:70/255.f green:70/255.f blue:70/255.f alpha:1] forState:NSOffState];
+        [button setTintColor:[NSColor colorWithRed:22/255.f green:103/255.f blue:249/255.f alpha:1] forState:NSOnState];
+        
+        NSImage *template = img;
+        [template setTemplate:YES];
+        [button setImage:nil];
+        CALayer *maskLayer = [CALayer layer];
+        [maskLayer setContents:template];
+        [maskLayer setFrame:button.bounds];
+        [button.layer setMask:maskLayer];
+        
+        NSColor *color = [button tintColorForState:button.state];
+        button.layer.backgroundColor = color.CGColor;
+        
         DVTGenericButtonViewController *bvc = [(DVTGenericButtonViewController*)[NSClassFromString(@"DVTGenericButtonViewController") alloc] initWithButton:button actionBlock:^(NSButton *sender){
             NSWindow *window = arg2;
             NSToolbarItem *item = nil;
@@ -205,6 +220,10 @@ NSString *const PluginButtonIdentifier = @"PluginButtonIdentifier";
                 }
             }
             NSSegmentedControl *control = (NSSegmentedControl *)item.view;
+            
+            NSColor *background_color = [sender tintColorForState:button.state];
+            sender.layer.backgroundColor = background_color.CGColor;
+            
             if ([sender state] == NSOnState) {
                 
                 if (![control isSelectedForSegment:2]) {
@@ -212,6 +231,7 @@ NSString *const PluginButtonIdentifier = @"PluginButtonIdentifier";
                     [item.target performSelector:item.action withObject:control];
                 }
                 DVTSplitView *splitView = [PluginButtonProvider splitViewForWindow:window];
+                
                 PanelView *myView = [[PluginPanel sharedPlugin] myViewForWindow:window];
                 myView.frame = splitView.bounds;
                 [myView setAutoresizingMask:NSViewWidthSizable | NSViewHeightSizable];
@@ -221,10 +241,7 @@ NSString *const PluginButtonIdentifier = @"PluginButtonIdentifier";
                 [splitView addSubview:myView];
                 [[NSNotificationCenter defaultCenter] addObserver:[PluginPanel sharedPlugin] selector:@selector(shouldResizePanelView:) name:NSSplitViewDidResizeSubviewsNotification object:nil];
             } else {
-                //                if ([control isSelectedForSegment:2]) {
-                //                    [control setSelected:NO forSegment:2];
-                //                    [item.target performSelector:item.action withObject:control];
-                //                }
+                
                 DVTSplitView *splitView = [PluginButtonProvider splitViewForWindow:window];
                 PanelView *myView = [[PluginPanel sharedPlugin] myViewForWindow:window];
                 [myView removeFromSuperview];
@@ -233,7 +250,7 @@ NSString *const PluginButtonIdentifier = @"PluginButtonIdentifier";
                 }
                 [[NSNotificationCenter defaultCenter] removeObserver:[PluginPanel sharedPlugin] name:NSSplitViewDidResizeSubviewsNotification object:nil];
             }
-        } itemIdentifier:PluginButtonIdentifier window:arg2];
+        } setupTeardownBlock:nil itemIdentifier:PluginButtonIdentifier window:arg2];
         bvc.label = @"plugins";
         DVTViewControllerToolbarItem *c = [ NSClassFromString(@"DVTViewControllerToolbarItem") toolbarItemWithViewController:bvc];
         c.label = @"plugins";

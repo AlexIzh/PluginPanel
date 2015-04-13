@@ -3556,7 +3556,7 @@ typedef struct {
 - (BOOL)validateMenuItem:(id)arg1;
 - (id)menuFormRepresentation;
 - (void)_buttonAction:(id)arg1;
-- (id)initWithButton:(id)arg1 actionBlock:(id)arg2 itemIdentifier:(id)arg3 window:(id)arg4;//NSButton, ^{}, NSString, NSWindow
+- (id)initWithButton:(id)arg1 actionBlock:(id)arg2 setupTeardownBlock:(id)arg3 itemIdentifier:(id)arg4 window:(id)arg5;//NSButton, ^{}, NSString, NSWindow
 
 @end
 
