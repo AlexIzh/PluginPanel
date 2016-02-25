@@ -8,8 +8,7 @@
 
 #import <AppKit/AppKit.h>
 
-@interface PluginPanel : NSObject
-{
+@interface PluginPanel : NSObject {
     NSMutableSet        *_windowsSet;
     NSMutableSet        *_viewsArray;
 }
