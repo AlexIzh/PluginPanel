@@ -165,7 +165,7 @@
 		1F22DE6D17B3A93D000F3305 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Александр Северьянов";
 			};
 			buildConfigurationList = 1F22DE7017B3A93D000F3305 /* Build configuration list for PBXProject "PluginPanel" */;

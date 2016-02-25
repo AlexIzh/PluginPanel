@@ -1,9 +1,7 @@
 PluginPanel
 ===========
 Plugin for Xcode! You can add your plugin to this panel and you should not care about ui in Xcode! It looks like left panel(tree of files, breakpoints etc).
-Xcode 5+ only.
-
-Supports XCode 6+ also
+Xcode 6+ only.
 
 [Example of use](https://github.com/AlexIzh/TimePlugin)
 
