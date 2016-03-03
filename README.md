@@ -13,7 +13,15 @@ Build this plugin, then the plugin will automatically be installed in `~/Library
 Relaunch Xcode and PluginPanel will make your life easier.
 
 ## Usage
-Install this plugin and use PluginPanelClient in your plugin.
+1. Install this plugin to Xcode.
+2. Move `PluginPanelClient` folder to your plugin Xcode project. 
+3. Start observe `PluginPanelDidLoadedWindowNotification` notification when `init` is called in your plugin
+4. Create your main `NSViewController` 
+5. Set image and your view controller to `DVTChoice`
+6. Call `PluginPanelAddPlugin` function with `DVTChoice` object and window from notification (notification.userInfo[PluginPanelWindowNotificationKey])
+7. Build your plugin and see result!
+
+Please, see example (`panelDidLoadNote` method for creation `DVTChoice`)
 
 Example usage:
 
