@@ -74,6 +74,7 @@ NSString *const PluginButtonIdentifier = @"PluginButtonIdentifier";
 
 - (void)activeNotification:(NSNotification *)notif {
     for (NSWindow *window in [NSApp windows]) {
+        if (!window) continue;
         if ([_windowsSet containsObject:window]) continue;
         [_windowsSet addObject:window];
         IDEToolbarDelegate *delegate = (IDEToolbarDelegate *)window.toolbar.delegate;
