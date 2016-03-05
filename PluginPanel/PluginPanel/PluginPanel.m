@@ -157,7 +157,9 @@ NSString *const PluginButtonIdentifier = @"PluginButtonIdentifier";
         if (!v) {
             v = [[PanelView alloc] initWithFrame:NSZeroRect];
             v.mainWindow = window;
-            [_viewsArray addObject:v];
+            if (v) {
+                [_viewsArray addObject:v];
+            }
         }
     }
     return v;
@@ -239,8 +241,10 @@ NSString *const PluginButtonIdentifier = @"PluginButtonIdentifier";
                 for (NSView *sub in splitView.subviews) {
                     [sub setHidden:YES];
                 }
-                [splitView addSubview:myView];
-                [[NSNotificationCenter defaultCenter] addObserver:[PluginPanel sharedPlugin] selector:@selector(shouldResizePanelView:) name:NSSplitViewDidResizeSubviewsNotification object:nil];
+                if (myView) {
+                    [splitView addSubview:myView];
+                    [[NSNotificationCenter defaultCenter] addObserver:[PluginPanel sharedPlugin] selector:@selector(shouldResizePanelView:) name:NSSplitViewDidResizeSubviewsNotification object:nil];
+                }
             } else {
                 
                 DVTSplitView *splitView = [PluginButtonProvider splitViewForWindow:window];
