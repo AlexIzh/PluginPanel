@@ -5,8 +5,8 @@ Xcode 6+ only.
 
 [Example of use](https://github.com/AlexIzh/TimePlugin)
 
-![PC_ss01.png](https://dl.dropboxusercontent.com/u/52596119/Screen%20Shot%202015-04-14%20at%202.14.56%20AM.png)
-![PC_ss02.png](https://dl.dropboxusercontent.com/u/52596119/Screen%20Shot%202015-04-14%20at%202.14.51%20AM.png)
+![PC_ss01.png](Screen%20Shot%202015-04-14%20at%202.14.56%20AM.png)
+![PC_ss02.png](Screen%20Shot%202015-04-14%20at%202.14.51%20AM.png)
 
 ## Installation
 Build this plugin, then the plugin will automatically be installed in `~/Library/Application Support/Developer/Shared/Xcode/Plug-ins`.  
